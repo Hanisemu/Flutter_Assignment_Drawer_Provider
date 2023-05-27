@@ -25,10 +25,12 @@ class  MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //leading: const Icon(Icons.data_object), 
-        title: const Text('{ }  List of item'),
+           title: const Row(
+          children: [Icon(Icons.data_object),
+            SizedBox(width: 20,), Text('List of item'),], 
+           ),
         actions: const [Icon(Icons.more_vert)], 
-                          ),
+         ),
       drawer: sidebar(), 
           floatingActionButton: FloatingActionButton(
       child: const Icon(Icons.add),
